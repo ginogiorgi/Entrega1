@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% load static %}
+    <title>Free Snow Bootstrap Website Template | Home :: w3layouts</title>
+    <link href="{% static 'Playground/css/bootstrap.css'%}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'Playground/css/style.css' %}" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="{% static 'Playground/js/jquery.min.js' %}"></script>
+	<!--<script src="js/jquery.easydropdown.js"></script>-->
+    <!--start slider -->
+    <link rel="stylesheet" href="{% static 'Playground/css/fwslider.css' %}" media="all">
+    <script src="{% static 'Playground/js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'Playground/js/fwslider.js' %}"></script>	
+    <!--end slider -->
+    <script type="text/javascript">
+            $(document).ready(function() {
+                $(".dropdown img.flag").addClass("flagvisibility");
+
+                $(".dropdown dt a").click(function() {
+                    $(".dropdown dd ul").toggle();
+                });
+                            
+                $(".dropdown dd ul li a").click(function() {
+                    var text = $(this).html();
+                    $(".dropdown dt a span").html(text);
+                    $(".dropdown dd ul").hide();
+                    $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                });
+                            
+                function getSelectedValue(id) {
+                    return $("#" + id).find("dt a span.value").html();
+                }
+
+                $(document).bind('click', function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.parents().hasClass("dropdown"))
+                        $(".dropdown dd ul").hide();
+                });
+
+
+                $("#flagSwitcher").click(function() {
+                    $(".dropdown img.flag").toggleClass("flagvisibility");
+                });
+            });
+        </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="{% url 'Inicio'%}"><img src="{% static 'Playground/images/logo2.png' %}" alt=""/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="{% static 'Playground/images/nav.png' %}" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="{% url 'SeriesPeliculas'%}">Series y Peliculas</a></li>
+						    	<li><a href="{% url 'MangasComics' %}">Manga y Comic</a></li>
+						    	<li><a href="experiance.html">Noticias</a></li>	
+								<li><a href="{% url 'Login' %}">Ingresar Usuario</a></li>							
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="{% static 'Playground/js/responsive-nav.js' %}"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="{% static 'Playground/js/classie.js' %}"></script>
+						<script src="{% static 'Playground/js/uisearch.js' %}"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+{% block primaryContent%}	
+{% endblock %}
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<h4>Sobre Nosotros</h4>
+						<li><a href="#">Quienes somos?</a></li>
+						<li><a href="#">Equipo</a></li>
+						<li><a href="#">Redes Sociales</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="footer_box">
+						<ul class="social">	
+							<li class="facebook"><a href="#"><span> </span></a></li>
+							<li class="twitter"><a href="#"><span> </span></a></li>
+							<li class="instagram"><a href="#"><span> </span></a></li>											  				
+						</ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>	
+</html>

@@ -1,0 +1,15 @@
+{% extends 'templatepadre.html' %}
+{% load static %}
+{% block primaryContent %}
+<h1>Inicio de sesion</h1>
+    {% if formulario.error %}
+    <p>Estan mal los datos, revisar</p>
+    {% endif %}
+    <form action="{% url 'Login' %}" method="POST">{% csrf_token %}
+        <h3>Ingrese los datos del manga o comic</h3>
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+{% endblock %}

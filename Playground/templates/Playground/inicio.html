@@ -1,0 +1,162 @@
+{% extends "templatepadre.html "%}
+{% load static %}
+{% block primaryContent%}
+	<div class="banner">
+	<!-- start slider -->
+	<div class="main">
+		<div class="content-top">
+			<h2>Series y Peliculas</h2>
+			<div class="close_but"><i class="close1"> </i></div>
+				<ul id="flexiselDemo3">
+				<li><img src="{% static 'Playground/images/anime1.jpg' %}" /></li>
+				<li><img src="{% static 'Playground/images/anime2.jpg' %}" /></li>
+				<li><img src="{% static 'Playground/images/anime3.jpg' %}" /></li>
+				<li><img src="{% static 'Playground/images/anime4.jpg' %}" /></li>
+				<li><img src="{% static 'Playground/images/anime5.jpg' %}" /></li>
+			</ul>
+		<h3>Destacado de la semana</h3>
+			<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		});
+		</script>
+		<script type="text/javascript" src="{% static 'Playground/js/jquery.flexisel.js' %}"></script>
+		</div>
+	</div>
+	<div class="features">
+		<div class="container">
+			<h3 class="m_3">mangas y comics</h3>
+			<div class="close_but"><i class="close1"> </i></div>
+			  <div class="row">
+				<div class="col-md-3 top_box">
+				  <div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/manga1.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>My Hero Academia</h2>
+                        <p>Izuku Midoriya: Origen es el primer volumen del manga de My Hero Academia.</p>
+                      </div>
+                   </a> </div>
+                  <h4 class="m_4"><a href="#">My Hero Academia #1</a></h4>
+                  <p class="m_5"></p>
+                </div>
+                <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/manga2.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>The Seven Deadly Sins</h2> </h2>
+                        <p>¡EL MANGA MÁS ESPERADO! FANTASÍA HEROICA, AVENTURAS Y HUMOR EN ESTADO PURO</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">The Seven Deadly Sins #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/comic1.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Los Vengadores</h2>
+                        <p>Nº 1 de LOS VENGADORES de la línea HEROES RETURN</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Los Vengadores #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/comic2.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>El Asombroso Spiderman</h2>
+                        <p>Amazing Spider-Man Vol 1 fue una serie de cómics publicada por Marvel Comics que comenzó a lanzarse por primera vez en marzo de 1963.</p>
+                      </div>
+                     </a> </div>
+                   <h4 class="m_4"><a href="#">El Asombroso Spiderman #1</a></h4>
+                   <p class="m_5"></p>				   
+				</div>
+			   <div class="row2">
+			    <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/manga3.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Akame Ga Kill</h2>
+                        <p>¡¡LLEGA AKAME, LA ASESINA DE OJOS ROJOS MÁS ESPERADA!!</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Akame Ga Kill #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/manga4.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Sword Art Online</h2> </h2>
+                        <p>Es el primer volumen de la serie de novelas ligeras Sword Art Online. Es el primer volumen del Arco Aincrad.</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Sword Art Online #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/comic5.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Tony Stark Iron Man</h2>
+                        <p>Tony Stark Iron Man - Un Hombre Hecho a sí Mismo</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Tony Stark Iron Man #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="{% static 'Playground/images/comic4.jpg' %}" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Justice League</h2>
+                        <p>El evento New 52 trae: ¡Una nueva historia de origen para la Liga de la Justicia!</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#">Justice League #1</a></h4>
+                   <p class="m_5"></p>
+				</div>
+			   </div>
+			</div>
+		 </div>
+	</div>
+{% endblock %}

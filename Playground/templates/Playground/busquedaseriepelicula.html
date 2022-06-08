@@ -1,0 +1,14 @@
+{% extends 'templatepadre.html' %}
+{% load static %}
+{% block primaryContent %}
+<h1>Resultados:</h1>
+{% if objetos %}
+<ul>
+    {% for objeto in objetos %}
+    <li>Nombre: {{objeto.nombre}}<br> Categoria: {{objeto.categoria}}<br>Genero: {{objeto.genero}}<br> Descripcion: {{objeto.descripcion}}<br> Origen: {{objeto.origen}}<br> Cantidad de Capitulos: {{objeto.cant_capitulos}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3 style="color:red">No se a encontrado serie o pelicula con el nombre: {{nombre}}</h3>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "templatepadre.html" %}
+{% load static%}
+{% block primaryContent %}
+<h1>Carga De Datos de Serie o Pelicula</h1>
+    {% if formulario.error %}
+    <p>Estan mal los datos, revisar</p>
+    {% endif %}
+    <form action="{% url 'SeriesPeliculas' %}" method="POST">{% csrf_token %}
+        <h3>Ingrese los datos de la serie o pelicula</h3>
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+<h1>Busqueda de Serie o pelicula</h1>    
+    <form action="{% url 'SeriesPeliculas' %}" method="GET">
+        <h3>Ingrese el nombre de la serie o pelicula a buscar</h3>
+        <input type="text" name="nombre" placeholder="NOMBRE" id="nombre">
+        <input type="submit" value="Buscar">
+    </form>
+{% endblock %}
